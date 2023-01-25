@@ -1,0 +1,59 @@
+.grid {
+  display: grid;
+  gap: 30px;
+  grid-template-areas:
+    "two one one"
+    "three one one";
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  padding: 30px 45px;
+
+  @media (max-width: 991px) {
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      " one one"
+      "two three";
+    padding: 30px;
+  }
+  @media (max-width: 767px) {
+    gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      " one"
+      " three"
+      "two ";
+    padding: 10px;
+  }
+}
+
+.one {
+  grid-area: one;
+  overflow: auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  // height: 100%;
+  overflow-y: auto;
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+  div {
+    // height: 200px;
+  }
+}
+
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}

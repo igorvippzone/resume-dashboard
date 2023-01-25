@@ -1,0 +1,41 @@
+.menu {
+  width: 100%;
+  max-width: 320px;
+  background: var(--bg-card-2);
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  flex-shrink: 0;
+  
+
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  right: 0;
+
+  img{
+    padding: 10px;
+    border-radius: 50%;
+  }
+}
+
+.description {
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+
+  h1,
+  p,
+  h3 {
+    margin: 0;
+  }
+
+  .location,
+  .locationIcon {
+    color: var(--gray);
+  }
+  .locationIcon {
+  }
+}

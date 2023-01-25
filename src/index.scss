@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("./assets/fonts/Inter-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"),
+    url("./assets/fonts/Inter-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("./assets/fonts/Inter-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"),
+    url("./assets/fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("./assets/fonts/Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"),
+    url("./assets/fonts/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("./assets/fonts/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"),
+    url("./assets/fonts/Inter-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("./assets/fonts/Inter-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+:root {
+  --purple: #8744e1;
+  --cyan: #5ccffe;
+  --yellow: #fbba6d;
+  --black: #313131;
+  --green: #1bd8ba;
+  --red: #fe718e;
+  --gray: #bdbdbd;
+  --white: #ffffff;
+
+  --purple-transparent: rgba(135, 68, 225, 0.25);
+  --red-transparent: rgba(254, 113, 142, 0.25);
+  --cyan-transparent: rgba(92, 207, 254, 0.25);
+
+  --bg: #f5f5f5;
+  --bg-card: #fff;
+  --bg-card-2: #fafafa;
+
+  --text: var(var(--black));
+
+  --gradient-1: linear-gradient(
+    202.58deg,
+    var(--purple) 35.44%,
+    #61379a 86.68%
+  );
+  --gradient-2: linear-gradient(127deg, var(--cyan) 19.17%, #3c95b9 81.45%);
+  --gradient-3: linear-gradient(
+    181.44deg,
+    var(--purple) -15.99%,
+    var(--cyan) 140.74%
+  );
+}
+
+:root body[data-theme="light"] {
+  --bg: #f5f5f5;
+  --bg-card: #fff;
+  --bg-card-2: #fafafa;
+
+  --text: var(--black);
+
+  --shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+:root body[data-theme="dark"] {
+  --bg: #17142a;
+  --bg-card: #28253b;
+  --bg-card-2: #201d33;
+
+  --text: var(--white);
+
+  --shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--purple) var(--red-transparent);
+
+  &::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    // background-color: var(--bg-card);
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--purple);
+    border-radius: 5px;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 16px;
+}
+h5 {
+  font-size: 14px;
+}
+
+p {
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  @media (max-width: 767px) {
+    height: 100%;
+  }
+}
+main {
+  display: flex;
+  height: 100%;
+  position: relative;
+  // padding: 45px;
+  overflow: hidden;
+
+
+
+  @media (max-width: 767px) {
+    overflow-y: auto;
+    margin-top: 110px;
+  }
+}
